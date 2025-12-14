@@ -72,17 +72,37 @@ http://localhost:3000
 
 ## 📊 Fitur Utama
 - Monitoring status perangkat jaringan
-- Update data secara real-time
+- Update data secara real‑time
 - Dashboard sederhana dan informatif
-- Tampilan web responsif
+- UI responsif
 
 ---
 
+## 📈 Diagram Arsitektur Sistem
+Diagram berikut menggambarkan alur kerja aplikasi Network Monitoring Dashboard:
+
+```text
++------------+        +-------------------+        +-------------------+
+|  Perangkat | -----> |   Server Node.js  | <----> |   Web Dashboard   |
+|  Jaringan  |  Ping  | (Express + Socket)|  Data  | (HTML, CSS, JS)  |
++------------+        +-------------------+        +-------------------+
+        |                        |
+        |<------ Status --------|
+```
+
+**Penjelasan diagram:**
+- Perangkat jaringan mengirimkan status (online/offline dan latency)
+- Server Node.js memproses data dan mengirimkannya secara real‑time menggunakan Socket.IO
+- Web Dashboard menampilkan hasil monitoring secara langsung
+
+---
+
+
 ## 👤 Identitas Pembuat
-- **Nama** : (Isi Nama Mahasiswa)
-- **NIM**  : (Isi NIM)
-- **Prodi**: (Isi Program Studi)
-- **Universitas**: (Isi Nama Kampus)
+- **Nama** : Yuda Wahyu Ramadhan
+- **NIM**  : 241091900368
+- **Prodi**: Sistem Komputer
+- **Universitas**: Universitas Pamulang Kota s
 
 ---
 
@@ -92,10 +112,7 @@ Proyek ini dibuat untuk keperluan akademik dan pembelajaran. Data monitoring ber
 ---
 
 ## 📸 Screenshot (Opsional)
-Tambahkan screenshot tampilan dashboard di sini jika diperlukan.
+
+<img width="1342" height="634" alt="Screenshot awal masuk web" src="https://github.com/user-attachments/assets/589a9fe4-51ec-4cea-a900-b47bd1766c7d" />
 
 ---
-
-## 📄 Lisensi
-Proyek ini menggunakan lisensi **MIT**.
-
