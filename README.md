@@ -15,6 +15,18 @@ Proyek ini dibuat sebagai **tugas kuliah / praktikum pengembangan web monitoring
 
 ---
 
+## ⚙️Cara Kerja Sistem
+1. Server backend melakukan pengecekan status perangkat jaringan secara berkala (menggunakan simulasi atau metode ping).
+2. Data status perangkat dan penggunaan bandwidth diperbarui secara otomatis.
+3. Data yang telah diperbarui dikirim ke client melalui WebSocket agar dapat ditampilkan secara real-time.
+4. Client (browser) menampilkan data monitoring dalam bentuk:
+        - Tabel perangkat jaringan
+        - Grafik penggunaan bandwidth
+        - Area log dan alert
+  5. Jika perangkat mengalami gangguan atau berstatus offline, sistem akan menampilkan alert pada halaman web.
+
+---
+
 ## 🛠️ Teknologi yang Digunakan
 - **Backend**: Node.js, Express
 - **Realtime Communication**: Socket.IO
@@ -59,9 +71,41 @@ npm install
 ---
 
 ## ▶️ Cara Menjalankan Aplikasi
+
+### A. Akses dari Laptop (Server / Dashboard)
+Jalankan perintah berikut di laptop:
 ```bash
 npm start
 ```
+
+Buka browser di **laptop** dan akses:
+```
+http://IP_Laptop/?dashboard=true
+```
+
+---
+
+### B. Akses dari HP (Client) melalui WiFi Lokal
+> **Syarat:** HP dan laptop harus terhubung ke **WiFi yang sama**.
+
+1. Cek IP Address laptop:
+   - **Windows:**
+     ```bash
+     ipconfig
+     ```
+   - Cari `IPv4 Address`, contoh:
+     ```
+     192.168.100.12
+     ```
+
+2. Buka browser di **HP**, lalu akses:
+```
+http://192.168.100.12:3000
+```
+(ganti IP sesuai IP laptop)
+
+❌ Jangan gunakan `localhost` di HP karena hanya berlaku untuk laptop/server.
+
 
 Buka browser dan akses:
 ```
@@ -102,17 +146,21 @@ Diagram berikut menggambarkan alur kerja aplikasi Network Monitoring Dashboard:
 - **Nama** : Yuda Wahyu Ramadhan
 - **NIM**  : 241091900368
 - **Prodi**: Sistem Komputer
-- **Universitas**: Universitas Pamulang Kota s
+- **Universitas**: Universitas Pamulang Kota Serang
 
 ---
 
 ## 📝 Catatan
-Proyek ini dibuat untuk keperluan akademik dan pembelajaran. Data monitoring bersifat simulasi / lokal.
-
+Web Monitoring merupakan solusi efektif untuk memantau perangkat jaringan secara real-time. Dengan memanfaatkan teknologi web dan komunikasi real-time, pengguna dapat memperoleh informasi kondisi jaringan secara cepat, akurat, dan mudah diakses melalui browser.
 ---
 
 ## 📸 Screenshot (Opsional)
-
+1. Dashboard Saat Petama Dibuka
 <img width="1342" height="634" alt="Screenshot awal masuk web" src="https://github.com/user-attachments/assets/589a9fe4-51ec-4cea-a900-b47bd1766c7d" />
 
+2. Device Ketika Connect Ke Dalam Web
+<img width="1344" height="627" alt="Screenshot jika device nyambung" src="https://github.com/user-attachments/assets/e43d0c24-7b17-4bbb-9fef-3134b9fc69c4" />
+
+3. Device Ketika Disconnect Ke Dalam Web dan Wifi
+<img width="1345" height="640" alt="Screenshot jika device tidak nyambung wifi" src="https://github.com/user-attachments/assets/8897bb70-fc19-4aa9-b6de-93803c24b1aa" />
 ---
