@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Web Monitoring HP</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+</head>
+<body class="bg-gradient-to-br from-blue-900 to-slate-900 text-white min-h-screen">
+<div class="p-6 max-w-6xl mx-auto">
+
+<h1 class="text-3xl font-bold mb-4 text-white">
+📡 Sistem Monitoring Perangkat HP Berbasis WiFi
+</h1>
+
+<button id="resetBtn"
+class="mb-6 px-4 py-2 bg-red-600 hover:bg-red-700 rounded-lg text-sm hidden">
+🔄 Reset Device
+</button>
+
+<div id="deviceCards" class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6"></div>
+
+<div class="bg-slate-800 rounded-xl p-4 mb-6">
+  <canvas id="chart"></canvas>
+</div>
+
+<div class="bg-black/50 rounded-xl p-4">
+  <ul id="logList" class="text-sm space-y-1"></ul>
+</div>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>

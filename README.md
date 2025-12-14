@@ -79,10 +79,10 @@ http://localhost:3000
 ---
 
 ## 👤 Identitas Pembuat
-- **Nama** : Yuda Wahyu Ramadhan
-- **NIM**  : 241091900368
-- **Prodi**: Sistem Komputer
-- **Universitas**: Universitas Pamulang
+- **Nama** : (Isi Nama Mahasiswa)
+- **NIM**  : (Isi NIM)
+- **Prodi**: (Isi Program Studi)
+- **Universitas**: (Isi Nama Kampus)
 
 ---
 
